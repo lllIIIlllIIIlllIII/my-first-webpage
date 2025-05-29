@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <title>ホームページ</title>
     <style>
-        /* CSSの指定をほぼ全て削除します */
-        /* body { */
-            /* font-family: sans-serif; */ /* ブラウザデフォルトのフォントに任せる */
-            /* background-color: #fff; */   /* ブラウザデフォルトの背景色に任せる */
-            /* color: #000; */             /* ブラウザデフォルトの文字色に任せる */
-        /* } */
-
-        /* h1 や p タグのデフォルトのマージンやフォントサイズもブラウザに完全に任せる */
-        /* h1 { */
-            /* font-size: 1.5em; */
-            /* margin-top: 0; */
-            /* margin-bottom: 0.5em; */
-        /* } */
-
-        /* p { */
-            /* margin-top: 0; */
-            /* margin-bottom: 0.5em; */
-        /* } */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        div {
+            text-align: left;
+        }
+        h1 {
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
     </style>
 </head>
 <body>
