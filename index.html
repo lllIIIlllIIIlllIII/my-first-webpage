@@ -12,25 +12,71 @@
             min-height: 100vh;
             margin: 0;
             font-family: sans-serif;
+            background-color: #f0f0f0;
         }
-        div {
+        .interactive-text {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        color 0.5s ease,
+                        text-shadow 0.5s ease;
             text-align: left;
         }
-        h1 {
-            margin-bottom: 0.5em;
+        h1.interactive-text:hover {
+            transform: rotate(-5deg) scale(1.1) skewX(-10deg) translateY(-5px);
+            color: #ff4500;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
-        p {
-            margin-top: 0;
-            margin-bottom: 0.5em;
+        h1.interactive-text:active {
+            transform: rotate(2deg) scale(1.05) skewX(5deg) translateY(2px);
+            color: #ff0000;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        p.interactive-text {
+            font-size: 1.2em;
+        }
+        p.interactive-text:hover {
+            transform: scale(1.05) skewY(3deg) translateX(15px) rotate(2deg);
+            color: #007bff;
+        }
+        p.interactive-text:active {
+            transform: scale(1) skewY(-1deg) translateX(10px) rotate(-1deg);
+            color: #0056b3;
+        }
+        .info-item-1:hover {
+            transform: rotate(4deg) scale(1.15) skew(-8deg, -3deg) translateX(-10px);
+            color: #28a745;
+        }
+        .info-item-1:active {
+            transform: rotate(-2deg) scale(1.1) skew(4deg, 1deg) translateX(-5px);
+            color: #1e7e34;
+        }
+        .info-item-2:hover {
+            transform: rotate(-3deg) scale(1.1) skew(5deg, 8deg) translateY(8px) translateX(5px);
+            color: #dc3545;
+        }
+        .info-item-2:active {
+            transform: rotate(1deg) scale(1.05) skew(-2deg, -4deg) translateY(4px) translateX(2px);
+            color: #b02a37;
+        }
+        .info-item-3:hover {
+            transform: scale(0.9) rotate(6deg) skewX(12deg) translateX(20px) translateY(-5px);
+            color: #ffc107;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .info-item-3:active {
+            transform: scale(0.85) rotate(-3deg) skewX(-6deg) translateX(10px) translateY(-2px);
+            color: #d39e00;
         }
     </style>
 </head>
 <body>
     <div>
-        <h1>ようこそ</h1>
-        <p>学生番号: 3018</p>
-        <p>学部学科: 理工学部　応用情報工学科</p>
-        <p>趣味: ゲーム</p>
+        <h1 class="interactive-text">ようこそ！！！！！！！！！！！</h1>
+        <p class="interactive-text info-item-1">学生番号: 3018</p>
+        <p class="interactive-text info-item-2">学部学科: 理工学部　応用情報工学科</p>
+        <p class="interactive-text info-item-3">趣味: ゲーム</p>
     </div>
 </body>
 </html>
