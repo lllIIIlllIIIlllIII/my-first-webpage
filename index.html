@@ -1,39 +1,135 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>ホームページ</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            text-align: center;
-        }
-        .info-label {
-            font-weight: bold;
-        }
-        p {
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>ようこそ！！！！！！！！！！！</h1>
-        <p><span class="info-label">学生番号:</span> 3018</p>
-        <p><span class="info-label">学部学科:</span> 理工学部　応用情報工学科</p>
-        <p><span class="info-label">趣味:</span> ゲーム 🎮</p>
-    </div>
-</body>
-</html>
+ <html lang="ja">
+ <head>
+     <meta charset="UTF-8">
+     <title>ホームページ</title>
+     <style>
+         body {
+             font-family: 'Arial Black', sans-serif; /* より強調されたフォント */
+             margin: 0;
+             background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #00ff00);
+             background-size: 400% 400%;
+             animation: gradient 15s ease infinite;
+             color: #fff; /* 明るい背景に合うように文字色を白に */
+             overflow: hidden; /* アニメーションがはみ出ないように */
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             min-height: 100vh;
+         }
+ 
+         @keyframes gradient {
+             0% {
+                 background-position: 0% 50%;
+             }
+             50% {
+                 background-position: 100% 50%;
+             }
+             100% {
+                 background-position: 0% 50%;
+             }
+         }
+ 
+         .container {
+             background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景でコンテンツを目立たせる */
+             padding: 50px;
+             border-radius: 15px;
+             box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+             text-align: center;
+             animation: fadeIn 2s ease-out;
+         }
+ 
+         @keyframes fadeIn {
+             0% {
+                 opacity: 0;
+                 transform: scale(0.8);
+             }
+             100% {
+                 opacity: 1;
+                 transform: scale(1);
+             }
+         }
+ 
+         h1 {
+             font-size: 3em;
+             color: #ffd700; /* ゴールドのような色 */
+             text-shadow: 2px 2px 4px #000;
+             margin-bottom: 30px;
+             animation: rainbow 5s linear infinite, bounce 1s infinite alternate;
+         }
+ 
+         @keyframes rainbow {
+             0% { color: #ff0000; }
+             14% { color: #ff7f00; }
+             28% { color: #ffff00; }
+             42% { color: #00ff00; }
+             57% { color: #0000ff; }
+             71% { color: #4b0082; }
+             85% { color: #8f00ff; }
+             100% { color: #ff0000; }
+         }
+ 
+         @keyframes bounce {
+             0% { transform: translateY(0); }
+             100% { transform: translateY(-10px); }
+         }
+ 
+         .info-item {
+             font-size: 1.2em;
+             margin-bottom: 15px;
+             opacity: 0;
+             animation: slideUp 1s ease-out forwards;
+         }
+ 
+         .info-item:nth-child(1) {
+             animation-delay: 0.5s;
+         }
+ 
+         .info-item:nth-child(2) {
+             animation-delay: 1s;
+         }
+ 
+         .info-item:nth-child(3) {
+             animation-delay: 1.5s;
+         }
+ 
+         @keyframes slideUp {
+             0% {
+                 opacity: 0;
+                 transform: translateY(50px);
+             }
+             100% {
+                 opacity: 1;
+                 transform: translateY(0);
+             }
+         }
+ 
+         .info-label {
+             font-weight: bold;
+             color: #00ffff; /* シアンのような色 */
+             text-shadow: 1px 1px 2px #000;
+             margin-right: 10px;
+         }
+ 
+         .hobby {
+             font-size: 1.5em;
+             color: #00ff00; /* 緑 */
+             text-shadow: 1px 1px 2px #000;
+             animation: pulse 1.5s infinite alternate;
+         }
+ 
+         @keyframes pulse {
+             0% { transform: scale(1); }
+             100% { transform: scale(1.1); }
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <h1>ようこそ！！！！！！！！！！！</h1>
+         <p class="info-item"><span class="info-label">学生番号:</span> <span style="color: #f0f; text-shadow: 1px 1px 2px #000;">3018</span></p>
+         <p class="info-item"><span class="info-label">学部学科:</span> <span style="color: #0ff; text-shadow: 1px 1px 2px #000;">理工学部　応用情報工学科</span></p>
+         <p class="info-item"><span class="info-label">趣味:</span> <span class="hobby">ゲーム 🎮</span></p>
+     </div>
+ </body>
+ </html>
