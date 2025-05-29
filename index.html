@@ -4,41 +4,32 @@
     <meta charset="UTF-8">
     <title>ホームページ</title>
     <style>
-        body {
-            font-family: sans-serif; /* OS標準のサンセリフ体 */
-            margin: 20px;            /* 最低限の余白 */
-            background-color: #fff;  /* 背景は白 */
-            color: #000;             /* 文字は黒 */
-        }
+        /* CSSの指定をほぼ全て削除します */
+        /* body { */
+            /* font-family: sans-serif; */ /* ブラウザデフォルトのフォントに任せる */
+            /* background-color: #fff; */   /* ブラウザデフォルトの背景色に任せる */
+            /* color: #000; */             /* ブラウザデフォルトの文字色に任せる */
+        /* } */
 
-        h1 {
-            font-size: 1.8em;       /* 見出しのサイズを少し大きめに */
-            border-bottom: 1px solid #ccc; /* 見出しの下に薄い線を引く程度 */
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
+        /* h1 や p タグのデフォルトのマージンやフォントサイズもブラウザに完全に任せる */
+        /* h1 { */
+            /* font-size: 1.5em; */
+            /* margin-top: 0; */
+            /* margin-bottom: 0.5em; */
+        /* } */
 
-        p {
-            line-height: 1.6;       /* 行間を少し確保 */
-            margin-bottom: 10px;
-        }
-
-        .info-label {
-            font-weight: normal;    /* 太字にしない */
-            margin-right: 5px;
-        }
-
-        /* 派手な装飾やアニメーションに関するCSSは全て削除 */
-
+        /* p { */
+            /* margin-top: 0; */
+            /* margin-bottom: 0.5em; */
+        /* } */
     </style>
 </head>
 <body>
+    <div>
         <h1>ようこそ</h1>
-        <p><span class="info-label">学生番号:</span> 3018</p>
-        <p><span class="info-label">学部学科:</span> 理工学部　応用情報工学科</p>
-        <p><span class="info-label">趣味:</span> 睡眠</p> 
+        <p>学生番号: 3018</p> {/* spanタグとクラス指定を削除 */}
+        <p>学部学科: 理工学部　応用情報工学科</p>
+        <p>趣味: ゲーム</p>
     </div>
-
-    
 </body>
 </html>
