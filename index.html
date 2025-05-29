@@ -5,188 +5,41 @@
     <title>ホームページ</title>
     <style>
         body {
-            font-family: 'Arial Black', sans-serif;
-            margin: 0;
-            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #00ff00);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            color: #fff;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            position: relative; /* パーティクル表示の基準点 */
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        #particles-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* パーティクルがクリックイベントを邪魔しないように */
-            z-index: -1; /* 背景に表示 */
-        }
-
-        .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            text-align: center;
-            animation: fadeIn 2s ease-out;
-            position: relative; /* ホバーエフェクトの基準点 */
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            font-family: sans-serif; /* OS標準のサンセリフ体 */
+            margin: 20px;            /* 最低限の余白 */
+            background-color: #fff;  /* 背景は白 */
+            color: #000;             /* 文字は黒 */
         }
 
         h1 {
-            font-size: 3em;
-            color: #ffd700;
-            text-shadow: 2px 2px 4px #000;
-            margin-bottom: 30px;
-            animation: rainbow 5s linear infinite, bounce 1s infinite alternate;
-            transition: transform 0.3s ease-in-out; /* ホバーアニメーション用 */
+            font-size: 1.8em;       /* 見出しのサイズを少し大きめに */
+            border-bottom: 1px solid #ccc; /* 見出しの下に薄い線を引く程度 */
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
 
-        h1:hover {
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        @keyframes rainbow {
-            0% { color: #ff0000; }
-            14% { color: #ff7f00; }
-            28% { color: #ffff00; }
-            42% { color: #00ff00; }
-            57% { color: #0000ff; }
-            71% { color: #4b0082; }
-            85% { color: #8f00ff; }
-            100% { color: #ff0000; }
-        }
-
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
-        }
-
-        .info-item {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            opacity: 0;
-            animation: slideUp 1s ease-out forwards;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* ホバーアニメーション用 */
-        }
-
-        .info-item:hover {
-            transform: translateX(10px);
-            color: #f0f;
-        }
-
-        .info-item:nth-child(1) {
-            animation-delay: 0.5s;
-        }
-
-        .info-item:nth-child(2) {
-            animation-delay: 1s;
-        }
-
-        .info-item:nth-child(3) {
-            animation-delay: 1.5s;
-        }
-
-        @keyframes slideUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        p {
+            line-height: 1.6;       /* 行間を少し確保 */
+            margin-bottom: 10px;
         }
 
         .info-label {
-            font-weight: bold;
-            color: #00ffff;
-            text-shadow: 1px 1px 2px #000;
-            margin-right: 10px;
+            font-weight: normal;    /* 太字にしない */
+            margin-right: 5px;
         }
 
-        .hobby {
-            font-size: 1.5em;
-            color: #00ff00;
-            text-shadow: 1px 1px 2px #000;
-            animation: pulse 1.5s infinite alternate;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* ホバーアニメーション用 */
-        }
+        /* 派手な装飾やアニメーションに関するCSSは全て削除 */
 
-        .hobby:hover {
-            transform: scale(1.2);
-            color: #ffff00;
-        }
-
-        /* キラキラパーティクルアニメーション */
-        @keyframes twinkle {
-            0% { opacity: 0.8; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-            100% { opacity: 0.8; transform: scale(1); }
-        }
-
-        .particle {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            opacity: 0;
-            animation: twinkle 1s ease-in-out infinite;
-        }
     </style>
 </head>
 <body>
-    <div id="particles-container"></div>
-    <div class="container">
-        <h1>ようこそ！</h1>
-        <p class="info-item"><span class="info-label">学生番号:</span> <span style="color: #f0f; text-shadow: 1px 1px 2px #000;">3018</span></p>
-        <p class="info-item"><span class="info-label">学部学科:</span> <span style="color: #0ff; text-shadow: 1px 1px 2px #000;">理工学部　応用情報工学科</span></p>
-        <p class="info-item"><span class="info-label">趣味:</span> <span class="hobby">ゲーム 🎮</span></p>
+    <div> {/* 以前の .container のような装飾は不要なので、シンプルな div に */}
+        <h1>ようこそ！！！！！！！！！！！</h1>
+        <p><span class="info-label">学生番号:</span> 3018</p>
+        <p><span class="info-label">学部学科:</span> 理工学部　応用情報工学科</p>
+        <p><span class="info-label">趣味:</span> ゲーム</p> {/* 絵文字も質素にするため削除しました */}
     </div>
 
-    <script>
-        const particlesContainer = document.getElementById('particles-container');
-        const numParticles = 50;
-
-        for (let i = 0; i < numParticles; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            const size = Math.random() * 10 + 5; // 5pxから15pxのランダムなサイズ
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}vw`;
-            particle.style.top = `${Math.random() * 100}vh`;
-            particle.style.animationDelay = `${Math.random() * 2}s`; // ランダムなアニメーション遅延
-            particlesContainer.appendChild(particle);
-        }
-    </script>
+    {/* パーティクル生成などのJavaScriptも不要なので削除 */}
 </body>
 </html>
